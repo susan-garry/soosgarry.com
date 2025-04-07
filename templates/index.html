@@ -6,26 +6,26 @@
 <div id="contact">
   <div class="information">
     <div class="portrait-title">
-      <h1 class="portrait-name">Rachit Nigam</h1>
-      <h3>Assistant Professor</h3>
-      <a href="https://mit.edu" target="_blank" itemprop="url" rel="noopener">
-        <span itemprop="name">Massachusetts Institute of Technology</span>
+      <h1 class="portrait-name">Soos Garry</h1>
+      <h3>PhD Student</h3>
+      <a href="https://www.cornell.edu/" target="_blank" itemprop="url" rel="noopener">
+        <span itemprop="name">Cornell University</span>
       </a>
       <br/>
-      <a href="https://www.eecs.mit.edu/" target="_blank" itemprop="url" rel="noopener">
-          <span itemprop="name">Electrical Engineering & Computer Science</span>
+      <a href="https://cis.cornell.edu/" target="_blank" itemprop="url" rel="noopener">
+          <span itemprop="name">Department of Computer Science</span>
         </a>
+        <h3> Pronouns: They/Them </h3>
     </div>
 
     <div class="contact-links">
-      {{ m::contact(link="mailto:rachit.nigam12+website@gmail.com", classes="fa fa-envelope") }}
-      {{ m::contact(link="//twitter.com/notypes", classes="fab fa-twitter") }}
-      {{ m::contact(link="//github.com/rachitnigam", classes="fab fa-github") }}
-      {{ m::contact(link="//scholar.google.com/citations?user=RNL2GjEAAAAJ", classes="ai ai-google-scholar") }}
+      {{ m::contact(link="mailto:shg64@cornell.edu", classes="fa fa-envelope") }}
+      {{ m::contact(link="//github.com/susan-garry", classes="fab fa-github") }}
+      <!-- {{ m::contact(link="//scholar.google.com/citations?user=RNL2GjEAAAAJ", classes="ai ai-google-scholar") }} -->
     </div>
   </div>
 
-  <div class="portrait" style="background-image: url('/img/headshot.png');"></div>
+  <div class="portrait" style="background-image: url('/img/headshot.jpeg');"></div>
 </div>
 
 <!-- Bio -->
@@ -34,15 +34,15 @@
     {% set page = get_page(path="about.md") %}
     {{ page.content | safe }}
   </div>
-  <div class="more">
+  <!-- <div class="more">
     <a href="/full-bio">
       Full Bio
       <i class="fa fa-angle-double-right"></i>
     </a>
-  </div>
+  </div> -->
 
   <!-- News -->
-  <h2>News</h2>
+  <!-- <h2>News</h2>
   {% set news = get_section(path="news/_index.md") %}
   {% set items = config.extra.news_items %}
   {% for post in news.pages | sort(attribute="date") | reverse | slice(end=items) %}
@@ -54,25 +54,25 @@
       <i class="fa fa-angle-double-right"></i>
     </a>
   </div>
-</section>
+</section> -->
 
 <!-- Publications -->
-<section>
+<!-- <section>
   {{ m::anchor_heading(content="Publications") }}
-  {% set news = get_section(path="publication/_index.md") %}
+  {% set news = get_section(path="publication/_index.md") %} -->
 
   <!-- Conference Publications -->
-  {{ m::anchor_heading(content="Conferences",size="3") }}
+  <!-- {{ m::anchor_heading(content="Conferences",size="3") }}
   {% for pub in news.pages | filter(attribute="extra.type", value="conf") | sort(attribute="date") | reverse %}
   {{ m::publication(pub=pub) }}
-  {% endfor %}
+  {% endfor %} -->
 
   <!-- Workshop Publications -->
-  {{ m::anchor_heading(content="Workshop & Short Papers",size="3") }}
+  <!-- {{ m::anchor_heading(content="Workshop & Short Papers",size="3") }}
   {% for pub in news.pages | filter(attribute="extra.type", value="workshop") | sort(attribute="date") | reverse %}
   {{ m::publication(pub=pub) }}
   {% endfor %}
-</section>
+</section> -->
 
 <!-- Blog Posts -->
 <section>
